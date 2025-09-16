@@ -181,7 +181,7 @@ span.highlight-text {
 a.button-link-l {
   background-color: #4575cd;
   color: #fff;
-  width: 70%;
+  width: 100%;
   display: block;
   text-align: center;
   font-size: 1.2rem;
@@ -189,5 +189,5 @@ a.button-link-l {
   padding: 0.3rem;
   border-radius: 0.3rem;
   font-weight: 500;
-  margin: 3rem 15%;
+  margin: 2rem 0;
 }
