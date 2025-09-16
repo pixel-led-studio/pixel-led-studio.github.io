@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: #0359b5;
+}
+
+span.highlight-text {
+  background-color: #ffcece;
+}
+
+.navigate-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #4667a3;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px #0000003b;
+}
+
+.header {
+  background-color: #2d4b81;
+  color: white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header-title-1 {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.header-title-2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.main-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-image {
+  max-height: 60vh;
+}
+
+.main-image-tiny {
+  max-height: 20vh;
+}
+
+.board-image-numbered {
+  width: 100%;
+}
+
+.h-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.h-sub-section {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.h-section,
+.h-sub-section {
+  transition: all 1s ease-in-out;
+}
+
+.h-section-title-2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #717171;
+  border-bottom: 2px solid #bec0c3;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.h-section-title-4 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #636363;
+  border-bottom: 1px solid #bec0c3;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.h-section-content {
+  padding-top: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.highlights-row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+  padding-left: 1rem;
+}
+
+.highlights-row-icon {
+  font-size: 1rem;
+}
+
+.highlights-row-text {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+.chapters-ol {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.chapters-ol > li {
+  font-size: 1.1rem;
+}
+
+.components-row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+  height: 1.6rem;
+  align-items: center;
+}
+
+.components-row-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #dd5959;
+  font-family: monospace;
+  height: 1.65rem;
+}
+
+.components-row-text {
+  padding-left: 0.25rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+  padding-top: 0.1rem;
+}
+
+.content-with-image-img {
+  float: left;
+  margin-right: 1rem;
+  width: 7.5rem;
+}

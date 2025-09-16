@@ -3,9 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Pixel-LED-Studio</title>
   </head>
   <body>
+    <div class="header">
+      <div class="header-title-1">Pixel-LED-Studio</div>
+    </div>
 
+    <div class="content">
+      <div class="h-section">
+        <div class="main-image-container">
+          <img
+            class="main-image-tiny"
+            src="./images/pixel-led-studio-controller-tiny.png"
+          />
+        </div>
+      </div>
+
+      <div class="h-section">
+        <div class="main-image-container">
+          <img
+            class="main-image"
+            src="./images/pixel-led-studio-controller-board.png"
+          />
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    function highlightSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      // add #000 to background color
+      section.style.backgroundColor = "#fdf7b4";
+      setTimeout(() => {
+        section.style.backgroundColor = null;
+      }, 3000);
+    }
+
+    // event on any <a> tag click
+    document.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        const sectionId = event.target.getAttribute("href").slice(1);
+        highlightSection(sectionId);
+      }
+    });
+  </script>
 </html>
