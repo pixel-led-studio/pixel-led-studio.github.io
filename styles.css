@@ -76,6 +76,7 @@ span.highlight-text {
 
 .main-image-tiny {
   max-height: 20vh;
+  margin: 2vh 0;
 }
 
 .board-image-numbered {
@@ -175,4 +176,18 @@ span.highlight-text {
   float: left;
   margin-right: 1rem;
   width: 7.5rem;
+}
+
+a.button-link-l {
+  background-color: #4575cd;
+  color: #fff;
+  width: 70%;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  margin: 3rem 15%;
 }
