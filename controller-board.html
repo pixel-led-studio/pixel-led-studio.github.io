@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pixel-LED-Studio</title>
+  </head>
+  <body>
+    <a href="#chapters-section" class="navigate-top"> 📒 </a>
+
+    <div class="header">
+      <div class="header-title-1">Pixel-LED-Studio</div>
+      <div class="header-title-2">Controller Board</div>
+    </div>
+
+    <div class="content">
+      <div class="h-section">
+        <div class="main-image-container">
+          <img
+            class="main-image"
+            src="./images/pixel-led-studio-controller-board.png"
+          />
+        </div>
+      </div>
+
+      <div class="h-section">
+        <div class="h-section-title-2">✨ හැඳින්වීම</div>
+        <div class="h-section-content">
+          මෙම Controller Board එක WS2811, WS2812 වැනි RGB LED Strips මඟින් ආලෝක
+          රටා සෑදීම සඳහා නිර්මාණය කර ඇත.<br />
+          මීට අමතරව මෙම Board එකෙහි පහත සඳහන් විශේෂාංග අන්තර්ගත වේ
+        </div>
+      </div>
+
+      <div id="chapters-section" class="h-section">
+        <div class="h-section-title-2">📒 පටුන</div>
+        <div class="h-section-content">
+          <ol class="chapters-ol">
+            <li><a href="#chapter-1">ප්‍රධාන කොටස් හැඳින්වීම</a></li>
+            <li><a href="#chapter-2">Modes/ක්‍රියාත්මක කල හැකි ආකාර</a></li>
+            <li><a href="#chapter-3">භාවිතයට උපදෙස්</a></li>
+            <li><a href="#chapter-4">Program කිරීම සඳහා උපදෙස්</a></li>
+            <li><a href="#chapter-5">වෙනත් තොරතුරු</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Chapter 1 -->
+      <div id="chapter-1" class="h-section">
+        <div class="h-section-title-2">1) ප්‍රධාන කොටස් හැඳින්වීම</div>
+        <div class="h-section-content">
+          <div class="main-image-container">
+            <img
+              class="board-image-numbered"
+              src="./images/board-components-numbered.png"
+            />
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">01</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-power-connector">Power Connector</a>
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">02</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-power-indicator"
+                >Power Indicator LED</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">03</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-switching-headers"
+                >5v/12 Switching Headers</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">04</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-master-control-in"
+                >Master Control In</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">05</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-mode-indicator">Mode Indicator LED</a>
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">06</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-rp2040-microcontroller"
+                >RP2040 Microcontroller</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">07</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-tf-card-slot">TF-Card Slot</a>
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">08</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-led-strip-out-1"
+                >LED Strip Out 1 + Power In</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">09</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-led-strip-out-2">LED Strip Out 2</a>
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">10</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-signal-out-indicator"
+                >Signal Out Indicator</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">11</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-signal-converter"
+                >3.3V to 5v Signal Converter</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">12</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-duplicate-out-toggle-switch"
+                >Duplicate Out Toggle Switch</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">13</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-master-controller-out"
+                >Master Controller Out/Forward</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">14</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-firmware-install"
+                >Firmware Install/Mount SD Card</a
+              >
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">15</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-restart">Restart Board</a>
+            </div>
+          </div>
+          <div class="components-row">
+            <div class="components-row-number">16</div>
+            <div class="components-row-text">
+              -&nbsp;<a href="#component-type-c-connector">Type-C Connector</a>
+            </div>
+          </div>
+        </div>
+        <div class="h-section-content">
+          <div id="component-power-connector" class="h-sub-section">
+            <div class="h-section-title-4">Power Connector</div>
+            <div class="h-section-content">
+              <div class="content-with-image">
+                <img
+                  class="content-with-image-img"
+                  src="./images/parts/main-power-connector.jpg"
+                />
+                <div class="content-with-image-text">
+                  Controller Board එක ක්‍රියාත්මක වීමට අවශ්‍ය විදුළි සැපයුම මෙම
+                  Connector එක හරහා ලබා දිය හැක. මෙම Board එක 5v හෝ 12v මගින්
+                  ක්‍රියාත්මක කල හැකි අතර, 12v සපයන්නේ නම්
+                  <a href="#component-switching-headers"
+                    >5v/12v Switching Header</a
+                  >
+                  එක 12v හරහා සම්බන්ධ කර ඇති බවර තහවුරු කරගන්න. තවද
+                  <a href="#component-led-strip-out-1">LED Strip Out 1</a> හරහා
+                  විදුළිය සපයන්නේ නම් මෙම Connector එක හරහා විදුලිය සැපයීම
+                  අවශ්‍ය නොවේ.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-power-indicator" class="h-sub-section">
+          <div class="h-section-title-4">Power Indicator LED</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/power indicator.jpg"
+              />
+              <div class="content-with-image-text">
+                Controller Board එකට අවශ්‍ය පරිදි විදුළි සැපයුමක් ලැබී ඇති බව
+                මෙම LED එක මගින් පෙන්වයි
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-switching-headers" class="h-sub-section">
+          <div class="h-section-title-4">5v/12v Switching Headers</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/power-select-jumpers.jpg"
+              />
+              <div class="content-with-image-text">
+                මෙම Headrs හරහා යොදා ඇති Jumper එක මගින් Board එකට ලැබෙන
+                වෝල්ටීයතාව 5v ද 12v ද යන්න සැකසිය හැක.
+                <span class="highlight-text"
+                  >මෙම header එක 5v ලෙස සකසා 12v විදුළි සැපයුමක් ලබා දීම නොකල
+                  යුතුයි</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-master-control-in" class="h-sub-section">
+          <div class="h-section-title-4">Master Control In</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/master control in.jpg"
+              />
+              <div class="content-with-image-text">
+                Slave Mode එකෙන් ක්‍රියාත්මක වන Board එකකට ක්‍රියාත්මක වීමට
+                අවශ්‍ය Controlling Signal ලබාගැනීම සඳහා මෙම Connector එක භාවිතා
+                වේ. මෙම Connector එකට ලැබන Signals ඒ ආකාරයෙන්ම
+                <a href="#component-master-control-out">Master Control Out</a>
+                Connector එක හරහා තවත් Slave Mode Board එකකට ලබා දිය හැක.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-mode-indicator" class="h-sub-section">
+          <div class="h-section-title-4">Mode Indicator LED</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/mode-indicator.jpg"
+              />
+              <div class="content-with-image-text">
+                Board එක ක්‍රියාත්මක වන ආකාරය(Mode) පිළිබඳව මෙම LED එක මගින්
+                පෙන්වනු ලබයි
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-rp2040-microcontroller" class="h-sub-section">
+          <div class="h-section-title-4">RP2040 Microcontroller</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/rp-2040-microcontroller.jpg"
+              />
+              <div class="content-with-image-text">
+                මෙය පසුගිය වසර කිහිපය තුල අතිශයින් ජනප්‍රිය වූ
+                <a
+                  href="https://www.raspberrypi.com/products/raspberry-pi-pico/"
+                  target="_blank"
+                  >Raspberry pi pico</a
+                >
+                Board එකෙහි භාවිතා වන Microcontroller එක වන අතර, ඉතා පසුවෙන්
+                භාවිතයට මෙන්ම Programm කරගැනීමට හැකි පරිදි නිර්මාණය කර තිබේ. මෙම
+                Controller Board එක ද
+                <a
+                  href="https://www.raspberrypi.com/products/raspberry-pi-pico/"
+                  target="_blank"
+                  >pico</a
+                >
+                Board එකක් ආකාරයෙන්ම Programm කිරීමට හැකි වන ආකාරයෙන් නිර්මා‍ණය
+                කර තිබේ. Micropython හරහා මෙන්ම Arduino IDE එක හරහා ද Programm
+                කල හැකි අතර, Programming පිලිබඳ දැනුමක් නැති අයට පවා අප විසින්
+                නිකුත් කල ඇති Firmwares ඉතා පහසුවෙන් Install කරගෙන භාවිත කල හැක.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-tf-card-slot" class="h-sub-section">
+          <div class="h-section-title-4">TF Card Slot</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/tf-card-connector.jpg"
+              />
+              <div class="content-with-image-text">
+                LED රටා ඇතුලත් කර ඇති Micro-SD Cards මෙම slot එක හරහා සම්බන්ධ කල
+                හැකි අතර, මෙම board එකට Micro-SD Adapter එකක් ලෙස ද ක්‍රියාත්මක
+                විය හැකි නිසා වෙනම Adapter නොමැතිව වුවද පරිඝණකය හරහා Card එකට
+                රටා ඇතුලත් කරගැනීමට හැකියාව ඇත.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-led-strip-out-1" class="h-sub-section">
+          <div class="h-section-title-4">LED Strip Out 1 + Power In</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/led-strip-out-1.jpg"
+              />
+              <div class="content-with-image-text">
+                LED strip එකක්(LED 2000 ක් දක්වා) ක්‍රියාත්මක වීමට අවශ්‍ය
+                signals ලබා දීම සඳහා මෙම connector එක භාවිතා වන අතර, Board එකට
+                ක්‍රියාත්මක වීමට අවශ්‍ය විදුලිය සැපයීමට ද මෙම connector එක
+                භාවිතා කල හැක. මෙම connector එකට වයර් සම්බන්ධ කල යුතු ආකාරය
+                පිළිබඳ රූපසටහනක් <a>මෙතනින්</a> දක්වා ඇත. තවද, මෙම connector එක
+                හරහා විදුළිය සපයන්නේ නම්,
+                <a href="#component-power-connector">Power Connector</a>
+                එක හරහා විදුළිය සැපයීම අවශ්‍ය නොවේ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-led-strip-out-2" class="h-sub-section">
+          <div class="h-section-title-4">LED Strip Out 2</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/led-strip-out-2.jpg"
+              />
+              <div class="content-with-image-text">
+                තවත් LED strip එකක්(LED 2000 ක් දක්වා) සම්බන්ධ කිරීමට අවශ්ය නම්
+                මෙම Connector එක භාවිතා කල හැකි අතර,
+                <a href="#component-led-strip-out-1">LED Strip Out 1</a> එකට හා
+                මෙම Connector එකට එකිනෙකට වෙනස් රටා 2ක් ක්‍රියාත්මක කිරීමේ
+                හැකියාව ඇත.
+                <a href="#component-led-strip-out-1">LED Strip Out 1</a> හි
+                රටාවම මෙම connector එක හරහා ලබාගැනීමට අවශ්‍ය නම්
+                <a href="#component-duplicate-out-toggle-switch"
+                  >Duplicate Out</a
+                >
+                ස්විචය භාවිතා කල හැක. තවද, මෙම connector එක හරහා board එක
+                ක්‍රියාත්මක වීමට අවශ්‍ය විදුලිය සැපයීමයට නොහැක.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-signal-out-indicator" class="h-sub-section">
+          <div class="h-section-title-4">Signal Out Indicator</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/led-strip-out-indicator.jpg"
+              />
+              <div class="content-with-image-text">
+                රටා වලට අදාල Signals, Board එක හරහා නිකුත් කෙරෙන විට මෙම LED එක
+                දැල්වේ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-signal-converter" class="h-sub-section">
+          <div class="h-section-title-4">3.3v to 5v Signal Converter</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/level-shifter.jpg"
+              />
+              <div class="content-with-image-text">
+                මෙම chip එක මගින්
+                <a href="#component-rp2040-microcontroller">RP2040</a>
+                Microcontoller එක හරහා නිකුත් කරන 3.3v signals 5v signals බවට
+                පරිවරර්තනය කරයි. මෙමගින් Signal වලට වඩා වැඩි ස්ථායීතාවක් ලබා
+                දෙයි.
+                <a
+                  href="https://docs.arduino.cc/hardware/uno-rev3/"
+                  target="_blank"
+                  >Arduino UNO</a
+                >
+                හැර බොහොමයක් Microcontrollers වලින් නිකුත් කල හැක්කේ 3.3V Signal
+                එකකි. නමුත්,
+                <a href="https://cdn-shop.adafruit.com/datasheets/WS2811.pdf"
+                  >WS2811</a
+                >,
+                <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf"
+                  >WS2812</a
+                >
+                වැනි chips සහිත RGB LED Strips වල Datasheet වල දක්වා ඇති පරිදි
+                Signal Input එක අවම වශයෙන්, <b>0.7 VDD</b> හෙවත් 3.5v වත් විය
+                යුතුය (0.7 x 5v). සාමාන්‍ය භාවිතයේදී Microcontroller එකෙන්
+                නිකුත් කරන 3.3V Signal එක කෙලින්ම LED Strip වලට දිය හැකි වුවද,
+                වයර් හරහා වැඩි දුරකට Signal යැවීමට සිදුවන අවස්ථා වල එම වයර් වල
+                ප්‍රතිරෝධය වැනි කරුණු මත Signal පහසුවෙන් විකෘති වීමට ඉඩ ඇත
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-duplicate-out-toggle-switch" class="h-sub-section">
+          <div class="h-section-title-4">Duplicate Out Toggle Switch</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/line-out-switch.jpg"
+              />
+              <div class="content-with-image-text">
+                මෙම ස්විචය මගින් OUT 1 හරහා නිකුත් වන Signal එකම OUT 2 හරහා ත්
+                ලබාගත හැකිය. එකම රටාව LED Strips 2ක් හරහා ලබා ගැනීමට මේ මඟින්
+                හැකි වේ. OUT 1 හා OUT 2 මගින් එකිනෙකට වෙනස් Signal 2 ක් ලබාගන්නා
+                අවස්ථා වලදී මෙම ස්විචය OFF කර තිබිය යුතුයි.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-master-controller-out" class="h-sub-section">
+          <div class="h-section-title-4">Master Controller Out/Forward</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/master-control-out.jpg"
+              />
+              <div class="content-with-image-text">
+                Master Mode එකෙන් ක්‍රියාත්මක වන අවස්ථාවකදී, Slave Boards වලට
+                රටා මාරු වීමට අදාල Signals මෙම Connector එක හරහා නිකුත් කරයි. මේ
+                හරහා එකිනෙකට වෙනස් රටා සහිත Boards කීපයක් එකට සම්බන්ධ කර ඒවා
+                සියල්ලහිම රටා මාරු වීම Master Board එකේ Timing අනුව ක්‍රියාත්මක
+                වන පරිදි සකසාගත හැක. තවද, Board එක ක්‍රියාත්මක වන්නේ Slave Mode
+                එකෙන් නම්, Master Signal එක ඊළඟ Slave Board එකට Forward කිරීමට
+                මෙම Connector එක භාවිතා කල වේ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-firmware-install" class="h-sub-section">
+          <div class="h-section-title-4">Firmware Install/Mount SD Card</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/flash-button.jpg"
+              />
+              <div class="content-with-image-text">
+                Board එකට ක්‍රියාත්මක වීමට අවශ්‍ය Firmware එක(Master/Slave Mode)
+                Install කරගැනීමට හා, Micro SD Adapter එකක් ලෙස ක්‍රියාත්මක
+                කිරීමට මෙම Button එක භාවිතා වේ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-restart" class="h-sub-section">
+          <div class="h-section-title-4">Restart Board</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/restart-button.jpg"
+              />
+              <div class="content-with-image-text">
+                Board එක ක්‍රියාත්මක වෙමින් පවතින අවස්ථාවකදී, Restart කරගැනීමට
+                මෙම Button එක භාවිතා වේ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="component-type-c-connector" class="h-sub-section">
+          <div class="h-section-title-4">Type-C Connector</div>
+          <div class="h-section-content">
+            <div class="content-with-image">
+              <img
+                class="content-with-image-img"
+                src="./images/parts/type-c-connector.jpg"
+              />
+              <div class="content-with-image-text">
+                USB-C කේබල් එකක් හරහා පරිඝණකයකට සම්බන්ධ කිරීමට.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div id="chapter-2" class="h-section">
+        <div class="h-section-title-2">3) Modes / ක්‍රියාත්මක කල හැකි ආකාර</div>
+        <div class="h-section-content">
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Flash Mode</div>
+            <div class="h-section-content">
+              Board එක ක්‍රියාත්මක වීමට අවශ්‍ය Firmware එක Install කරගැනීමට නම්
+              පළමුව Board එක Flash Mode එකෙන් පරිඝණකයක් හා සම්බන්ධ කල යුතු වේ.
+              <br /><br />
+              මේ සඳහා පහත පියවර අනුගමනය කරන්න.
+
+              <ol>
+                <li>
+                  Flash බොත්තම ඔබාගෙන සිටින අතරතුර USB-C කේබල් එක සම්බන්ධ කරන්න.
+                  එවිට USB Flash Drive එකක් ආකාරයෙන් පරිඝණකය හා සම්බන්ධ වේ.
+                </li>
+                <li>
+                  ඔබ විසින් Download කරගත් Firmaware එක(.uf2 file) USB Flash
+                  Drive එකට Copy කරන්න
+                </li>
+                <li>
+                  File එක සාර්ථකව Copy වූ පසු Board එක ස්වයංක්‍රීයව Restart වන
+                  අතර ඉන් පසුව ඔබ විසින් Install කරන ලද Firmware එකට අනුව
+                  ක්‍රියාත්මක වේ.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Micro SD Adapter Mode</div>
+            <div class="h-section-content">
+              මෙම ආකාරයෙන් ක්‍රියාත්මක වීමට නම් පළමුව,
+
+              <ol>
+                <li>Board එකට Firmware Install කර තිබිය යුතුයි</li>
+                <li>
+                  Fat-32 ආකාරයෙන් Format කරන ලද Micro SD Card එකක් සම්බන්ධ කර
+                  තිබිය යුතුයි
+                </li>
+              </ol>
+
+              ඉහත ආකාරයෙන් සූදානම් කරගත් Board එකක් පහත සඳහන් පරිදි Micro SD
+              Adapter Mode එකට ක්‍රියාත්මක කල හැකිය.
+              <ol>
+                <li>
+                  Board එක සාමාන්‍ය පරිදි USB-C කේබල් එකක් හරහා පරිඝණයට සම්බන්ධ
+                  කරන්න
+                </li>
+                <li>Flash බොත්තම එක් වරක් ඔබන්න</li>
+              </ol>
+              එවිට Micro SD Card එක පරිඝණකයේ පෙන්වනු ඇති අතර Card එකට Files Copy
+              කිරීමට මේ හරහා හැකි වේ. මෙය සාමාන්‍ය වෙළඳපොලේ ඇති Micro SD Adapter
+              වලට වඩා වේගවත් බවින් අඩු අතර විශාල ප්‍රමාණයේ Files Copy කරන විට
+              සැළකිය යුතු වේලාවක් ගතවිය හැකි බව කරුණාවෙන් සලකන්න.
+            </div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Master/Standalone Mode</div>
+            <div class="h-section-content">
+              Controller Board එකක් පමණක් භාවිතා වන විට මෙම ආකාරයෙන් ක්‍රියාත්මක
+              කල යුතුය. මේ ආකාරයෙන් ක්‍රියාත්මක වීමට නම් Board එකට Firmware
+              Install කරන විට Master Mode ලෙස සඳහන් කර ඇති Firmware එක Install
+              කරගන්න.
+            </div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Slave Mode</div>
+            <div class="h-section-content">
+              Controller Board එකකට වැඩි ගනනක් අවශ්‍ය වන අවස්ථා වල (LED 4,000 ක්
+              හෝ ඊට වැඩි) රටාව කොටස් කිහිපයක් ලෙස සකස් කර එම කොටස් වෙන වෙනම
+              Board කිහිපයක් අතරේ බෙදා දී ඉන්පසුව එම Boards සියල්ලම එකම රටාවේ
+              කොටස් ලෙස සමාන්තරව ක්‍රියාත්මක කරවීමට මෙම Mode එක භාවිතා වේ.<br />
+              මෙහිදී පළමු Board එක Master Mode එකෙන් ක්‍රියාත්මක විය යුතු අතර
+              ඉතිරි Board සියල්ලම Slave Mode එකෙන් ක්‍රියාත්මක වේ.
+              <br />
+              Master Board එක සාමාන්‍ය පරිදි ක්‍රියාත්මක වන අතර LED රටා වල සෑම
+              පියවරකටම පෙර Master Out Connector එක හරහා එයට සම්බන්ධ වී ඇති
+              සියළුම Slave Boards වලට Signal එකක් නිකුත් කරනු ලබයි.
+              <br />
+              Slave Mode එකෙන් ක්‍රියාත්මක වන Boards සියල්ලම, LED රටාවේ ඊළඟ
+              පියවර නිකුත් කිරීමට Master Board එක මඟින් නිකුත් කරනු ලබන Signal
+              එක ලැබෙන තෙක් බලා හිදී.
+              <br />
+              මේ ආකාරයෙන් ක්‍රියාත්මක වන විට Boards සියල්ලම එකම වේලාවේදී LED රටා
+              පියවර අතර මාරුවීම සිදුවන අතර කිසිම ආකරයක Timing වල වෙනසක් සිදු
+              නොවේ.
+              <br />Master Signal එකක් නොමැතිව Slave Boards වලට තනි තනිව
+              ක්‍රියාත්මක විය නොහැක. එසේ ක්‍රියාත්මක වීමට අවශ්‍ය නම් එම Boards
+              වලට Master Mode Firmware එක Install කරගත යුතුය. <br />
+              <br />
+              Boards එකකට වඩා වැඩි ගණනක් Master / Slave ආකාරයෙන් ක්‍රියාත්මක
+              කිරීමට පහත පියවර අනුගමනය කරන්න.
+              <ol>
+                <li>LED රටා නිර්මාණය කරන විට</li>
+                <li>Flash බොත්තම එක් වරක් ඔබන්න</li>
+              </ol>
+
+              <br />ඒ සඳහා පලමු Board එක හැර අනෙක් Board සියල්ලටම Firmware
+              Install කරන විට Slave Mode ලෙස සඳහන් කර ඇති Firmware එක Install
+              කරගන්න.
+
+              <div class=""></div>
+            </div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Single OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Dual OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div id="chapter-3" class="h-section">
+        <div class="h-section-title-2">2) භාවිතයට උපදෙස්</div>
+        <div class="h-section-content">
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Firmware Install කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">
+              Micro SD Card එක සූදානම් කරගැනීම
+            </div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">විදුලි සැපයුම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">LED රටා ඇතුලත් කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">LED Strip වලට සම්බන්ධ කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div id="chapter-4" class="h-section">
+        <div class="h-section-title-2">4) LED අති විශාල ප්‍රමාණයක් දක්වා..</div>
+        <div class="h-section-content">
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Firmware Install කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">
+              Micro SD Card එක සූදානම් කරගැනීම
+            </div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">විදුලි සැපයුම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">LED රටා ඇතුලත් කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">LED Strip වලට සම්බන්ධ කිරීම</div>
+            <div class="h-section-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div id="chapter-4" class="h-section">
+        <div class="h-section-title-2">4) Program කිරීම සඳහා උපදෙස්</div>
+        <div class="h-section-content">
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Standalone Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Master Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Slave Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Single OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Dual OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div id="chapter-5" class="h-section">
+        <div class="h-section-title-2">5) වෙනත් තොරතුරු</div>
+        <div class="h-section-content">
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Standalone Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Master Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Slave Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Single OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+
+          <div id="instruction-power-supply" class="h-sub-section">
+            <div class="h-section-title-4">Dual OUT Mode</div>
+            <div class="h-section-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function highlightSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      // add #000 to background color
+      section.style.backgroundColor = "#fdf7b4";
+      setTimeout(() => {
+        section.style.backgroundColor = null;
+      }, 3000);
+    }
+
+    // event on any <a> tag click
+    document.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        const sectionId = event.target.getAttribute("href").slice(1);
+        highlightSection(sectionId);
+      }
+    });
+  </script>
+</html>
