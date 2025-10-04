@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pixel-LED-Studio</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-title-1">Pixel-LED-Studio</div>
+    </div>
+
+    <div class="content">
+      <div class="h-section">
+        <div class="h-section-title-2">✨ මිලදී ගන්න</div>
+        <div class="h-section-content">
+          Pixel LED ආලෝක රටා නිර්මාණය කිරීම සඳහා
+          <ul>
+            <li>ඕනෑම අයෙකුට භාවිතා කිරීමට පහසු</li>
+            <li>
+              කුඩා ප්‍රමාණයේ නිර්මාණ වල සිට LED දසදහස් ගණනක් හෝ ඊටත් වැඩි ගනණක්
+              දක්වා නිර්මාණ සඳහා යොදාගැනීමට හැකි
+            </li>
+            <li>
+              සාමාන්ය LED රටා වලට වඩා නිර්මාණශීලී හා සංකීර්ණ රටා නිර්මාණය
+              කරගැනීමට හැකි
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="h-section">
+        <div class="h-section-title-2">Pixel LED Studio - Controller Board</div>
+        <div class="main-image-container">
+          <img
+            class="main-image"
+            src="./images/pixel-led-studio-controller-board.png"
+          />
+        </div>
+        <div class="h-section-content">
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              5v හා 12v LED Strips සඳහා භාවිතා කිරීමේ හැකියාව
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              5v හා 12v විදුලි සැපයුමෙන් ක්&zwj;රියාත්මක වීමේ හැකියාව
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              Signal Output එක 5v වලින් ලබාදීමේ හැකියාව
+              <sup><a href="#footnote-1">[1]</a></sup>
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              Output Channel 2 ක් හරහා LED <b>4000</b> ක් දක්වා (2000&zwj;x2)
+              Control කිරීමේ හැකියාව
+              <sup><a href="#footnote-2">[2]</a></sup>
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              MicroSD Adapter එකක් ලෙස ක්&zwj;රියාත්මක වීමේ හැකියාව
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              Controller Board කිහිපයක් එකට සම්බන්ධ කර ක්&zwj;රියාත්මක කිරීමේ
+              හැකියාව
+              <sup><a href="#footnote-3">[3]</a></sup>
+            </div>
+          </div>
+          <div class="highlights-row">
+            <div class="highlights-row-icon">✅</div>
+            <div class="highlights-row-text">
+              Micropython හා Arduino මගින් Program කිරීමේ හැකියාව
+            </div>
+          </div>
+        </div>
+        <div class="h-section-content">
+          <a href="./controller-board.html" class="button-link-l"
+            >වැඩිදුර කියවන්න..</a
+          >
+          <a href="" class="button-link-l buy-now">මිලදී ගන්න..</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function highlightSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      // add #000 to background color
+      section.style.backgroundColor = "#fdf7b4";
+      setTimeout(() => {
+        section.style.backgroundColor = null;
+      }, 3000);
+    }
+
+    // event on any <a> tag click
+    document.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        const sectionId = event.target.getAttribute("href").slice(1);
+        highlightSection(sectionId);
+      }
+    });
+  </script>
+</html>
